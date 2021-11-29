@@ -71,7 +71,6 @@ def Create_Spiral(pitchAngle=15.0,m=1,r0=2.0,rmax=20.0,nsamples=1000,noiseConst=
     else:
         dtheta = 0
     
-    #r = np.sqrt(np.random.uniform(0,rmax,size=nsamples))
     r = np.random.uniform(0,rmax,size=nsamples)
     theta = m/(np.tan(PA)) * np.log((r+1.e-4)/r0) #1e-4 added here to prevent nans near log(0)
     xl, yl = r*np.cos(theta+dtheta), r*np.sin(theta+dtheta)
